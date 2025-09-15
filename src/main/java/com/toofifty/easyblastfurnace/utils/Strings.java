@@ -21,7 +21,6 @@ public class Strings {
     public static String WITHDRAW_ICE_OR_SMITHS_GLOVES = "Withdraw ice gloves or smiths gloves (i)";
     public static String EQUIP_ICE_OR_SMITHS_GLOVES = "Equip ice gloves or smiths gloves (i)";
     public static String EQUIP_GOLDSMITH_GAUNTLETS_AFTER_COLLECT_BARS = "Equip after collecting bars";
-    public static String GO_TO_DISPENSER_AND_EQUIP_ICE_OR_SMITHS_GLOVES = "Go to bar dispenser and equip ice gloves or smiths gloves (i)";
     public static String WITHDRAW_GOLDSMITH_GAUNTLETS = "Withdraw goldsmith gauntlets";
     public static String EQUIP_GOLDSMITH_GAUNTLETS = "Equip goldsmith gauntlets";
     public static String WITHDRAW_SMITHING_CAPE = "Withdraw Smithing cape";
@@ -51,6 +50,10 @@ public class Strings {
     public static String RUNITE = "Runite bars";
     public static String RUNITE_GOLD_HYBRID = "Gold + runite bars";
     public static String RUNITE_SILVER_HYBRID = "Silver + runite bars";
+
+	// Npcs
+	public static String PAY_FOREMAN = "Pay the Foreman";
+	public static String TAKE_COINS = "Take coins";
 
     // Patterns
     public static String COAL_FULL = "^The coal bag contains (\\d+) pieces of coal.$";

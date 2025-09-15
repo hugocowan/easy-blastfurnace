@@ -93,6 +93,9 @@ public class EasyBlastFurnacePlugin extends Plugin
     @Inject
     private TileStepOverlay tileStepOverlay;
 
+	@Inject
+	private NpcStepOverlay npcStepOverlay;
+
     @Inject
     private CoalBagOverlay coalBagOverlay;
 
@@ -122,6 +125,7 @@ public class EasyBlastFurnacePlugin extends Plugin
         overlayManager.add(widgetStepOverlay);
         overlayManager.add(objectStepOverlay);
         overlayManager.add(tileStepOverlay);
+        overlayManager.add(npcStepOverlay);
     }
 
     @Override
@@ -138,6 +142,7 @@ public class EasyBlastFurnacePlugin extends Plugin
         overlayManager.remove(widgetStepOverlay);
         overlayManager.remove(objectStepOverlay);
         overlayManager.remove(tileStepOverlay);
+        overlayManager.remove(npcStepOverlay);
     }
 
     @Subscribe

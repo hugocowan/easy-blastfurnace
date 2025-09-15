@@ -8,6 +8,7 @@ import com.toofifty.easyblastfurnace.utils.Equipment;
 import com.toofifty.easyblastfurnace.utils.Strings;
 import net.runelite.api.gameval.InterfaceID;
 import net.runelite.api.gameval.ItemID;
+import net.runelite.api.gameval.NpcID;
 
 public abstract class Method
 {
@@ -40,6 +41,8 @@ public abstract class Method
     protected final MethodStep[] depositEnergyPotions = new MethodStep[] { new ItemStep(Strings.DEPOSIT_ENERGY_POTIONS, ItemID.VIAL_EMPTY, ItemID._1DOSE1ENERGY, ItemID._2DOSE1ENERGY, ItemID._3DOSE1ENERGY, ItemID._4DOSE1ENERGY) };
 	protected final MethodStep[] depositStrangeFruit = new MethodStep[] { new ItemStep(Strings.DEPOSIT_STRANGE_FRUIT, ItemID.MACRO_TRIFFIDFRUIT) };
 
+	protected final MethodStep[] takeCoins = new MethodStep[] { new ItemStep(Strings.TAKE_COINS, ItemID.COINS) };
+
     // objects
     protected final MethodStep[] depositInventory = new MethodStep[] { new WidgetStep(Strings.DEPOSIT_INVENTORY, InterfaceID.BANKMAIN, InterfaceID.Bankmain.DEPOSITINV), new ObjectStep(Strings.OPEN_BANK, EasyBlastFurnacePlugin.BANK_CHEST) };
     protected final MethodStep[] putOntoConveyorBelt = new MethodStep[] { new ObjectStep(Strings.PUT_ORE_ONTO_CONVEYOR_BELT, EasyBlastFurnacePlugin.CONVEYOR_BELT) };
@@ -51,6 +54,9 @@ public abstract class Method
     protected final MethodStep[] goToDispenser = new MethodStep[] { new TileStep(Strings.GO_TO_DISPENSER, EasyBlastFurnacePlugin.PICKUP_POSITION) };
     protected final MethodStep[] goToDispenserAndEquipIceOrSmithsGloves = new MethodStep[] { new ItemStep(Strings.EQUIP_ICE_OR_SMITHS_GLOVES, Equipment.ICE_GLOVES.items), new TileStep(Strings.GO_TO_DISPENSER, EasyBlastFurnacePlugin.PICKUP_POSITION) };
     protected final MethodStep[] collectBarsAndEquipGoldsmithGauntlets = new MethodStep[] { new ItemStep(Strings.EQUIP_GOLDSMITH_GAUNTLETS_AFTER_COLLECT_BARS, Equipment.GOLDSMITH.items), new ObjectStep(Strings.COLLECT_BARS, EasyBlastFurnacePlugin.BAR_DISPENSER) };
+
+	// npcs
+	protected final MethodStep[] payForeman = new MethodStep[] { new NpcStep(Strings.PAY_FOREMAN, NpcID.BLAST_FURNACE_INSTRUCTOR) };
 
     public abstract MethodStep[] next(BlastFurnaceState state);
 
